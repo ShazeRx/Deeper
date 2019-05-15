@@ -65,7 +65,7 @@ html, body, pre, code, kbd, samp {
 font-family: "blox";
 src: url("Blox2.ttf");
 }
-#logo-wrapper .nes-btn {
+#logo-wrapper > .nes-btn:first-child {
 
 
 margin: 0;

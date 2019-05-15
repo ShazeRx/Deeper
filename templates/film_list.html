@@ -1,0 +1,89 @@
+{%extends "base.html"%}
+{%block content%}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="#">DEEPER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'features' %}">Features</a>
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link" href="#">Pricing<i class="nes-icon coin "></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<h1 style="color:white; margin-left:auto;">Films</h1>
+<br>
+
+<button onclick="location.href='{%url 'new_film'%}';" type="button" class="nes-btn is-success">Add Film</button>
+<br>
+{%for film in films%}
+<div class="nes-container is-rounded is-dark with-title is-centered">
+
+    <h1 class="title">{{film}}</h1>
+
+    <h6 class="description">{{film.description}}</h6>
+    <div class="text-center">
+  <img src="{{film.photo_url|default_if_none:'#'}}" class=" img-responsive img-circle" alt="..." style="image-rendering: pixelated;">
+</div>
+<div>
+
+    <button onclick="location.href='{%url 'edit_movie' film.id%}';" type="button" class="nes-btn is-warning">Edit</button>
+
+
+
+
+  <button onclick="location.href='{%url 'delete_movie' film.id%}';" type="button" class="nes-btn is-error">Delete</button>
+</div>
+</div>
+<dialog class="nes-dialog is-rounded" id="dialog-rounded">
+    <form method="dialog">
+      <p class="title">Are tou sure? {{film.id}} </p>
+
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary" onclick="location.href='{%url 'delete_movie' film.id%}';" >Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+{%endfor%}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if films.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ films.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ films.number }} of {{ films.paginator.num_pages }}.
+        </span>
+
+        {% if films.has_next %}
+            <a href="?page={{ films.next_page_number }}">next</a>
+            <a href="?page={{ films.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{%endblock%}

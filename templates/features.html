@@ -1,0 +1,48 @@
+{%extends "base.html"%}
+{% load widget_tweaks %}
+{%block content%}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="/main/filmy">DEEPER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/main/filmy">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'features' %}">Features</a>
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link" href="#">Pricing<i class="nes-icon coin "></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 style="color:white; margin-left:auto;">Features</h1>
+<div class="nes-container is-dark with-title">
+  <p class="title">Current Functionality</p>
+  <p>Already I've build a skeleton of platform of rating movies which includes operations based on CRUD.
+      Additionally i added a Signup functionality, and login/out session. There is some elements of bootstrap, Jinja2 and NES CSS</p>
+</div>
+<br>
+<div class="nes-container is-dark with-title">
+  <p class="title">A huge database of movies on demand</p>
+  <p>Future plans consist implementation of  SKRILL Payments, wishlist, cart and RESTfull API</p>
+</div>
+
+
+{%endblock%}

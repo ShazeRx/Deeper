@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{% load widget_tweaks %}
+{%block content%}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p class="form-wrapper">{{ form.name.label_tag }}</p>
+        <p class="form-wrapper">{{ form.name|add_class:'nes-input'  }}</p>
+        <p class="form-wrapper">{{ form.description.label_tag }}</p>
+        <p class="form-wrapper">{{ form.description|add_class:'nes-input'  }}</p>
+        <p class="form-wrapper">{{ form.year.label_tag }}</p>
+       <p class="form-wrapper">{{ form.year|add_class:'nes-input'  }}</p>
+        <p class="form-wrapper">{{ form.rating.label_tag }}</p>
+        <p class="form-wrapper">{{ form.rating|add_class:'nes-input'  }}</p>
+        <p class="form-wrapper">{{ form.photo.label_tag }}</p>
+        <p class="form-wrapper">{{ form.photo|add_class:'nes-input'  }}</p>
+        <button type="submit" class="nes-btn is-primary">Dodaj</button>
+    </form>
+{%endblock%}

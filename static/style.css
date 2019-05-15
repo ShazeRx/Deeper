@@ -1,0 +1,143 @@
+
+body, html {
+  height: 100%;
+  }
+ #logo-wrapper h1{
+
+
+ font-family: 'blox';
+ color:white;
+ font-size:700%;
+ }
+#logo-wrapper {
+    text-align: center;
+  background-image: url("intro.gif");
+  height: 100%;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#logo-wrapper h2{
+
+ color:white;
+
+ font-size:4vh;
+ margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+
+}
+#sentence {
+text-align:center;
+float:left;
+
+
+}
+
+
+
+@font-face {
+font-family: "amp";
+src: url("amp.ttf");
+}
+html, body, pre, code, kbd, samp {
+          font-family: 'Press Start 2P', cursive;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+font-family: "blox";
+src: url("Blox2.ttf");
+}
+#logo-wrapper .nes-btn {
+
+
+margin: 0;
+  position: absolute !important ;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#logo-wrapper #login .nes-input{
+width:30%;
+padding:10px;
+}
+#logo-wrapper #login p:nth-child(2n+2)
+{
+color:white;
+
+}
+.navbar-dark .navbar-brand{
+font-family: 'blox';
+font-size:200%;
+}
+i.nes-icon.coin{
+height:0px;
+transform: scale(1);
+
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+padding:20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+      overflow: hidden;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-image:url("films1.gif");
+      background-repeat:no-repeat;
+       background-size: cover;
+       background-position: center;
+ }
+.nes-container.is-rounded.is-dark{
+width:49%;
+float:left;
+}
+
+.pagination{
+float:left;
+}
+p.form-wrapper:nth-child(2n+2){
+color:white;}
+.title{
+margin-left:auto;
+}
+#id_description{
+height:100px;}
+h3{
+color:white;}
+.nes-container > .text-center{
+width:30%;
+height:30%;
+margin-right: auto;
+float: right;
+
+
+
+}
+.description{
+display:block;
+float:right;
+width:70%;
+
+}

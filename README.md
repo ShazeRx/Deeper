@@ -1,3 +1,3 @@
 # Deeper
 Video platform on demand
-https://deep-er.herokuapp.com
+https://deep-erx.herokuapp.com

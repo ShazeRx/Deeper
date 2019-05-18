@@ -42,11 +42,18 @@
 <div class="nes-container is-rounded is-dark with-title is-centered">
 
     <h1 class="title">{{film}}</h1>
-
+{%for comment in film.comments.all %}
+    <p>{{comment.timestamp}}</p>
+    <p>{{comment.user}}</p>
+    <p>{{comment.content}}</p>
+    {%empty%}
+    <p>There is no comments</p>
+    {%endfor%}
     <h6 class="description">{{film.description}}</h6>
     <div class="text-center">
   <img src="{{film.photo_url|default_if_none:'#'}}" class=" img-responsive img-circle" alt="..." style="image-rendering: pixelated;">
 </div>
+
 <div>
 
     <button onclick="location.href='{%url 'edit_movie' film.id%}';" type="button" class="nes-btn is-warning">Edit</button>

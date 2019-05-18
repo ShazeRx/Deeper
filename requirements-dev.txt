@@ -6,9 +6,11 @@ Django==2.2.1
 django-filter==2.1.0
 django-widget-tweaks==1.4.3
 djangorestframework==3.9.4
+drf-dynamic-fields==0.3.1
 idna==2.8
 omdb==0.10.1
 Pillow==6.0.0
+psycopg2==2.8.2
 python-decouple==3.1
 pytz==2019.1
 requests==2.21.0

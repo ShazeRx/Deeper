@@ -21,7 +21,7 @@ GET https://deep-erx.herokuapp.com/main/top/ - return leaderboard of movies base
 https://deep-erx.herokuapp.com/main/top/?from_date=1975&to_date=2019, it will filter queryset between the given date range(only integer)
 
 
-Unfortunately still i'am thinking about how to hide particular field in json output, so i made a trick and when you add to link expression "&fields=rank,comments_count,id" it will only return the json body with these necessary fields.
+Unfortunately still i'am thinking about how to hide particular field in json output, so i made a trick and when you add to link expression "/?fields=rank,comments_count,id" it will only return the json body with these necessary fields.
 
 I made also fron-end work. From these side app could do basic operations based on CRUD, there is still error with deleting the movie without photo, so when you try to delete record, please add any photo,save, and then delete movie.Of couse you can sign up, and sign in, there is login session, forms, features page, and logout option. 
 

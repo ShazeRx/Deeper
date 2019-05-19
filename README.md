@@ -17,7 +17,7 @@ GET https://deep-erx.herokuapp.com/main/comments/ - return all comments in movie
 POST https://deep-erx.herokuapp.com/main/comments/ - require user, id of movie and body of comment
 
 
-GET https://deep-erx.herokuapp.com/main/top/ - return leaderboard of movies based on count of comments and release date 
+GET https://deep-erx.herokuapp.com/main/top/ - return leaderboard of movies based on count of comments
 https://deep-erx.herokuapp.com/main/top/?from_date=1975&to_date=2019, it will filter queryset between the given date range(only integer)
 
 

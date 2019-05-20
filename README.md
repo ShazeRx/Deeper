@@ -31,7 +31,9 @@ I'm still working on it so the app maybe have a lot of bugs
 
 
 All requirements are in file above. You don't need to migrate anything, migrations have been done.
-
+Admin site:{login:'memento',password:'code'}
 
 
 I think it's a lot more than just on junior level.
+
+
